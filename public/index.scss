@@ -1,0 +1,35 @@
+
+#emonicationRoot {
+    height: 100%;
+
+    #canvasInput {
+        outline: solid red 1px;
+    }
+
+    #ranges {
+        position: absolute;
+        bottom: 30%;
+        left: calc(50% - 40px);
+
+        #fieldInput {
+            outline: solid red 1px;
+            height: 80px;
+            width: 80px;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+
+            // .half {
+            //     outline: solid red 1px;
+            //     height: 200px;
+            //     width: 200px;
+            // }
+            // .bottom-and-right {
+            //     position: absolute;
+            //     right: 0;
+            // }
+        }
+    }
+}
