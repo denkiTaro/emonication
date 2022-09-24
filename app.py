@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, url_for, request, redirect, send_from_directory
 from datetime import datetime
 import os
 
@@ -50,6 +50,10 @@ def post():
         
         # nameとtitleをindex.htmlに変数展開
         return render_template('index.html', msg=text, emotion=est_param, label=label, score=score, instraction="メッセージを送信してください")
+
+@app.route("/src/<path:filename>")
+def play(filename):
+    return send_from_directory("src", filename)
 
 if __name__ == "__main__":
     app.debug = True  # デバッグモード有効化

@@ -45,10 +45,25 @@
                             </div>
                         </div>
 
-                        <div class="form-outline">
-                            <textarea class="form-control" id="msg" name="msg" cols="50" rows="10" maxlength="200"></textarea>
-                            <button type="submit" class="btn btn-success">送信する</button>
-                            <a href="javascript:onClick()">スタイル変更</a>
+                        <div class="tabs">
+                            <input id="form" type="radio" name="tab_item" checked>
+                            <label class="tab_item" for="form">テキスト</label>
+                            <input id="emotion" type="radio" name="tab_item">
+                            <label class="tab_item" for="emotion">エモーション</label>
+                            <div class="tab_content" id="form_content">
+                              <div class="tab_content_description">
+                                <div class="form-outline">
+                                    <textarea class="form-control" id="msg" name="msg" cols="50" rows="10" maxlength="200"></textarea>
+                                    <button type="submit" class="btn btn-success">送信する</button>
+                                    <button type="button" class="btn btn-primary" onclick="onClick()">スタイル変更</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab_content" id="emotion_content">
+                              <div class="tab_content_description">
+                                <p class="c-txtsp">エモーションの内容</p>
+                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -58,12 +73,17 @@
 </section>
 <script>
     function onClick() {
+        //音の処理もここに
         var label = {{label|tojson}};
         var score = {{score|tojson}};
         if (label == "ポジティブ") {
             document.getElementById("message").classList.add("happy");
+            const sound = new Audio('src/admiration.mp3');
+            sound.play();
         } else if (label == "ネガティブ") {
             document.getElementById("message").classList.add("sad");
+            const sound = new Audio('src/grief.mp3');
+            sound.play();
         } else {
             document.getElementById("message").classList.add("nomal");
         }
