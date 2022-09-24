@@ -73,16 +73,42 @@
 </section>
 <script>
     function onClick() {
-        //音の処理もここに
-        var label = {{label|tojson}};
-        var score = {{score|tojson}};
-        if (label == "ポジティブ") {
-            document.getElementById("message").classList.add("happy");
+        // var label = {{label|tojson}};
+        // var score = {{score|tojson}};
+
+        var emotion = "喜び"
+
+        if (emotion == "喜び") {
+            document.getElementById("message").classList.add("joy");
+            const sound = new Audio('src/ecstacy.mp3');
+            sound.play();
+        } else if (emotion == "信頼") {
+            document.getElementById("message").classList.add("trust");
             const sound = new Audio('src/admiration.mp3');
             sound.play();
-        } else if (label == "ネガティブ") {
-            document.getElementById("message").classList.add("sad");
+        } else if (emotion == "心配") {
+            document.getElementById("message").classList.add("fear");
+            const sound = new Audio('src/terror.mp3');
+            sound.play();
+        } else if (emotion == "驚き") {
+            document.getElementById("message").classList.add("surprise");
+            const sound = new Audio('src/amaziment.mp3');
+            sound.play();
+        } else if (emotion == "悲しみ") {
+            document.getElementById("message").classList.add("sadness");
             const sound = new Audio('src/grief.mp3');
+            sound.play();
+        } else if (emotion == "嫌悪感") {
+            document.getElementById("message").classList.add("disgust");
+            const sound = new Audio('src/loathing.mp3');
+            sound.play();
+        } else if (emotion == "怒り") {
+            document.getElementById("message").classList.add("anger");
+            const sound = new Audio('src/rage.mp3');
+            sound.play();
+        } else if (emotion == "予測") {
+            document.getElementById("message").classList.add("anticipation");
+            const sound = new Audio('src/vigilance.mp3');
             sound.play();
         } else {
             document.getElementById("message").classList.add("nomal");
