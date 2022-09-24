@@ -5,8 +5,18 @@
 仮想環境を作成する
 
 ```
-python -m venv venv
+python3 -m venv venv
+```
+Flaskをインストールする  
+
+```
+pip install Flask
 ```
 
-仮想環境内のPythonのバージョンを3.9.0に設定する
+## サーバを起動
+```
+python3 app.py
+```
+
+
 
