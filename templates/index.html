@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
+
+
+
 <section class="bg-dark">
     <div class="container py-5">
         <div class="row d-flex justify-content-center">
@@ -26,47 +29,41 @@
                                     {{ instraction }}
                                     {% endif %}
                                 </p>
-                                <form action="/post" method="post" class="form-inline"></form>
-                            </div>
-                        </div>
-
-                        <div class="d-flex flex-row justify-content-start mb-4">
-                            <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
-                                <p>
-                                    <!-- 変数nameに値があるとき -->
-                                    {% if msg %}
-                                    {{ emotion }}
-                                    <!-- 変数nameに値がないとき -->
-                                    {% else %}
-                                    "不明"
-                                    {% endif %}
-                                </p>
                                 <form action="/post" method="post" class="form-inline">
-                            </div>
+             
+                                    <br><br>
+                                    <div>
+                                        <label for="msg">送信メッセージ</label><br>
+                                        <textarea id="msg" name="msg" cols="50" rows="10" maxlength="200"></textarea>
+                                      </div>
+                                    <button type="submit" class="btn btn-success">送信する</button>
+                                </form>
                         </div>
-
-                        <div class="form-outline">
-                            <textarea class="form-control" id="msg" name="msg" cols="50" rows="10" maxlength="200"></textarea>
-                            <button type="submit" class="btn btn-success">送信する</button>
-                            <a href="javascript:onClick()">スタイル変更</a>
-                        </div>
+                      
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<script>
-    function onClick() {
-        var label = {{label|tojson}};
-        var score = {{score|tojson}};
-        if (label == "ポジティブ") {
-            document.getElementById("message").classList.add("happy");
-        } else if (label == "ネガティブ") {
-            document.getElementById("message").classList.add("sad");
-        } else {
-            document.getElementById("message").classList.add("nomal");
-        }
-    }
-</script>
+
+<body id="emonicationRoot" >
+
+    <main>
+        
+
+        <form id="ranges">
+            <div>
+                <div id="fieldInput">
+                    <img src="images/Group_10.png" alt="">
+                               
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+
+<script src="images/index.js"></script>
+
+
 {% endblock %}
