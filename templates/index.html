@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="form" class="bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" class="bg-dark text-white">
+                <p class="bg-dark text-white">
+                    <!-- 変数nameに値があるとき -->
+                    {% if msg %}
+                    {{ msg }}
+                    <!-- 変数nameに値がないとき -->
+                    {% else %}
+                    {{ instraction }}
+                    {% endif %}
+                </p>
+                <form action="/post" method="post" class="form-inline">
+             
+                    <br><br>
+                    <div>
+                        <label for="msg">送信メッセージ</label><br>
+                        <textarea id="msg" name="msg" cols="50" rows="10" maxlength="200"></textarea>
+                      </div>
+                    <button type="submit" class="btn btn-success">送信する</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
