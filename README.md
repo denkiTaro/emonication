@@ -7,16 +7,18 @@
 ```
 python3 -m venv venv
 ```
-Flaskをインストールする  
+ライブラリをインストールする  
 
 ```
-pip install Flask
+pip install -r requirements.txt
 ```
 
 ## サーバを起動
 ```
 python3 app.py
 ```
+
+
 
 
 
