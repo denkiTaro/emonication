@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+
 <section class="bg-dark">
     <div class="container py-5">
         <div class="row d-flex justify-content-center">
@@ -24,21 +25,6 @@
                                     <!-- 変数nameに値がないとき -->
                                     {% else %}
                                     {{ instraction }}
-                                    {% endif %}
-                                </p>
-                                <form action="/post" method="post" class="form-inline"></form>
-                            </div>
-                        </div>
-
-                        <div class="d-flex flex-row justify-content-start mb-4">
-                            <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
-                                <p>
-                                    <!-- 変数nameに値があるとき -->
-                                    {% if msg %}
-                                    {{ emotion }}
-                                    <!-- 変数nameに値がないとき -->
-                                    {% else %}
-                                    "不明"
                                     {% endif %}
                                 </p>
                                 <form action="/post" method="post" class="form-inline">
@@ -71,6 +57,18 @@
         </div>
     </div>
 </section>
+<body id="emonicationRoot" >
+    <main>
+        <form id="ranges">
+            <div>
+                <div id="fieldInput">
+                    <img src="images/Group_10.png" alt="">
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+<script src="images/index.js"></script>
 <script>
     function onClick() {
 
