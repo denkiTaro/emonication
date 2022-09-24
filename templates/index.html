@@ -58,15 +58,15 @@
 </section>
 <script>
     function onClick() {
-    var label = {{label|tojson}};
-    var score = {{score|tojson}};
-    if (label == "ポジティブ") {
-        document.getElementById("message").classList.add("happy");
-    } else if (label == "ネガティブ") {
-        document.getElementById("message").classList.add("sad");
-    } else {
-        document.getElementById("message").classList.add("nomal");
+        var label = {{label|tojson}};
+        var score = {{score|tojson}};
+        if (label == "ポジティブ") {
+            document.getElementById("message").classList.add("happy");
+        } else if (label == "ネガティブ") {
+            document.getElementById("message").classList.add("sad");
+        } else {
+            document.getElementById("message").classList.add("nomal");
+        }
     }
-}
 </script>
 {% endblock %}
