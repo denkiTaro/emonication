@@ -5,11 +5,27 @@ import os
 # 自身の名称を app という名前でインスタンス化する
 app = Flask(__name__)
 
+
+def estimate_emotion(input_text):
+    from transformers import pipeline, AutoModelForSequenceClassification, BertJapaneseTokenizer
+    # 感情分析の実行
+    model = AutoModelForSequenceClassification.from_pretrained('daigo/bert-base-japanese-sentiment') 
+    tokenizer = BertJapaneseTokenizer.from_pretrained('cl-tohoku/bert-base-japanese-whole-word-masking')
+    nlp = pipeline("sentiment-analysis",model=model,tokenizer=tokenizer)
+    # input_text = '修理に出します。購入して１年ちょっとで壊れてしまいました。残念です。'
+    result = nlp(input_text)
+
+    print(result)
+    label = result[0].get("label")
+    score = result[0].get("score")
+    return f"感情は：{label}、スコア：{score}"
+
 # index にアクセスされた場合の処理
 @app.route('/')
 def index():
     title = "Emonication"
-    message = "メッセージを送信kしてください"
+    message = "メッセージを送信してください"
+
     # messageとtitleをindex.htmlに変数展開
     return render_template('index.html',
                            message=message, title=title)
@@ -26,12 +42,12 @@ def post():
 
     # POSTメソッドの場合
     else:
-        # リクエストフォームから「名前」を取得
-        # name = request.form['name']
         text = request.form['msg']
+        est_param = estimate_emotion(text)
+        
         # nameとtitleをindex.htmlに変数展開
         return render_template('index.html',
-                               msg=text,instraction="メッセージを送信してください")
+                               msg=text, emotion=est_param ,instraction="メッセージを送信してください")
 
 
 if __name__ == "__main__":
