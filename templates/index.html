@@ -28,39 +28,87 @@
                                     {% endif %}
                                 </p>
                                 <form action="/post" method="post" class="form-inline">
-             
-                                    <br><br>
-                                    <div>
-                                        <label for="msg">送信メッセージ</label><br>
-                                        <textarea id="msg" name="msg" cols="50" rows="10" maxlength="200"></textarea>
-                                      </div>
-                                    <button type="submit" class="btn btn-success">送信する</button>
-                                </form>
+                            </div>
                         </div>
-                      
+
+                        <div class="tabs">
+                            <input id="form" type="radio" name="tab_item" checked>
+                            <label class="tab_item" for="form">テキスト</label>
+                            <input id="emotion" type="radio" name="tab_item">
+                            <label class="tab_item" for="emotion">エモーション</label>
+                            <div class="tab_content" id="form_content">
+                              <div class="tab_content_description">
+                                <div class="form-outline">
+                                    <textarea class="form-control" id="msg" name="msg" cols="50" rows="10" maxlength="200"></textarea>
+                                    <button type="submit" class="btn btn-success">送信する</button>
+                                    <button type="button" class="btn btn-primary" onclick="onClick()">スタイル変更</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab_content" id="emotion_content">
+                              <div class="tab_content_description">
+                                <p class="c-txtsp">エモーションの内容</p>
+                              </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <body id="emonicationRoot" >
-
     <main>
-        
-
         <form id="ranges">
             <div>
                 <div id="fieldInput">
                     <img src="images/Group_10.png" alt="">
-                               
                 </div>
             </div>
         </form>
     </main>
 </body>
-
 <script src="images/index.js"></script>
+<script>
+    function onClick() {
 
+        var emotion = "喜び"
+
+        if (emotion == "喜び") {
+            document.getElementById("message").classList.add("joy");
+            const sound = new Audio('src/ecstacy.mp3');
+            sound.play();
+        } else if (emotion == "信頼") {
+            document.getElementById("message").classList.add("trust");
+            const sound = new Audio('src/admiration.mp3');
+            sound.play();
+        } else if (emotion == "心配") {
+            document.getElementById("message").classList.add("fear");
+            const sound = new Audio('src/terror.mp3');
+            sound.play();
+        } else if (emotion == "驚き") {
+            document.getElementById("message").classList.add("surprise");
+            const sound = new Audio('src/amaziment.mp3');
+            sound.play();
+        } else if (emotion == "悲しみ") {
+            document.getElementById("message").classList.add("sadness");
+            const sound = new Audio('src/grief.mp3');
+            sound.play();
+        } else if (emotion == "嫌悪感") {
+            document.getElementById("message").classList.add("disgust");
+            const sound = new Audio('src/loathing.mp3');
+            sound.play();
+        } else if (emotion == "怒り") {
+            document.getElementById("message").classList.add("anger");
+            const sound = new Audio('src/rage.mp3');
+            sound.play();
+        } else if (emotion == "予測") {
+            document.getElementById("message").classList.add("anticipation");
+            const sound = new Audio('src/vigilance.mp3');
+            sound.play();
+        } else {
+            document.getElementById("message").classList.add("nomal");
+        }
+    }
+</script>
 {% endblock %}
