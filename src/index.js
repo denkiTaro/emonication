@@ -9,7 +9,7 @@ const fieldRanges = context.fieldRanges;
 
 // fieldRangesのサイズを設定
 fieldRanges.height = fieldInputDOM.offsetHeight;
-fieldRanges.width = fieldInputDOM.offsetWidth;
+fieldRanges.width  = fieldInputDOM.offsetWidth;
 
 const pointerdownEvent = EVENT.pointerdownEvent;
 const pointermoveEvent = EVENT.pointermoveEvent;

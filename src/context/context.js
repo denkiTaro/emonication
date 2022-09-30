@@ -1,10 +1,9 @@
 
-
 // 座標関係
 /**
  * start&end は指が 触れた、離れた 瞬間の座標
  * emotion は [ 左を0とした右回りの値 , 感情(漢字) ]
- * height&width エモコン要素についての情報
+ * height&width エモコン要素についての情報(読み込みのみ可)
  * deg 角度
  */
 export const fieldRanges = {
@@ -29,6 +28,13 @@ export const fieldRanges = {
 export const textValues = {
     textValue: '',
 }
+
+
+
+// ============================================
+// ============================================
+
+
 
 // 音楽関係
 /**
@@ -58,3 +64,46 @@ export const musics = {
     get 9(){ return new Audio('../src/music/explosion.mp3')},
 }
 
+
+// 画像関係
+export const emoconImages = {
+    emotionArray: [
+        // terror
+        'worry',
+        // admiration
+        'comfort',
+        // ecstasy
+        'happy',
+        // vigilance
+        'concern',
+        // rage
+        'angry',
+        // loathing
+        'disgust',
+        // grief
+        'sadness',
+        // amazement
+        'surprise',
+    ],
+
+    setBomb() {
+    },
+
+    /**
+     * 
+     * @param {HTMLImageElement} e 画像を初期値にする
+     */
+    init(e) {
+        e.src = '../src/images/emocon.svg';
+    },
+
+    /**
+     * 
+     * @param {HTMLImageElement} e 指定の画像にする要素
+     * @param {number} num 感情番号
+     */
+    setIcons(e,num) {
+        e.src = '../src/images/emoconIcons/emocon_' + this.emotionArray[num] + '.svg';
+    },
+
+}

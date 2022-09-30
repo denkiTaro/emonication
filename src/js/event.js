@@ -18,6 +18,7 @@ const designArray =
     [ '#91C2CF' , [ '😮' , '😵' ] ],
     ['🤯']
 ];
+const fieldImgDOM = document.getElementById('fieldInput').getElementsByTagName('img')[0];
 
 // ===================================================
 
@@ -78,6 +79,7 @@ function playMusic(num) {
 
 // ===================================================
 
+
 /**
  * 素の座標（要素の左上をoriginとした）の設定
  * @param {Element} e 
@@ -102,6 +104,8 @@ export const pointermoveEvent = function(e) {
     fieldRanges.endY = simplifyNumbers(yRange);
     const deg = createAngleByTan( fieldRanges.endX - fieldRanges.startX , fieldRanges.endY - fieldRanges.startY );
     fieldRanges.emotion = emotionalDisplayWithDeg( deg );
+    context.emoconImages.setIcons( fieldImgDOM , fieldRanges.emotion[0] );
+    console.log( fieldRanges.emotion[0] );
 }
 
 /**
@@ -115,6 +119,7 @@ export const touchendEvent = function() {
     textInputDOM.value = textInputDOM.value + designInfo[1][1];
     backgroundDOM.style.backgroundColor = designInfo[0];
     playMusic( fieldRanges.emotion[0] );
+    context.emoconImages.init( fieldImgDOM )
 }
 
 /**
@@ -123,5 +128,6 @@ export const touchendEvent = function() {
 export const deleteClickEvent = function () {
     textInputDOM.value = '';
     backgroundDOM.style.backgroundColor = '';
+    context.emoconImages.init( fieldImgDOM );
 }
 
