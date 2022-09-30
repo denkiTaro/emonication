@@ -1,4 +1,5 @@
 
+contextから必要な情報を取得できます
 
 
 ## 環境構築
@@ -17,8 +18,5 @@ pip install -r requirements.txt
 ```
 python3 app.py
 ```
-
-
-
 
 

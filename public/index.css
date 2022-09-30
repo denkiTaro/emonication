@@ -1,20 +1,56 @@
 #emonicationRoot {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
-#emonicationRoot #canvasInput {
-  outline: solid red 1px;
+#emonicationRoot .text-container {
+  word-break: break-word;
 }
-#emonicationRoot #ranges {
-  position: absolute;
+#emonicationRoot .text-container #textInput {
+  outline: 0;
+  border: 0;
+  width: 90vw;
+  font-size: 40px;
+  font-weight: 800;
+  margin-top: 40px;
+  background: transparent;
+  resize: none;
+}
+#emonicationRoot .position-container {
+  position: fixed;
   bottom: 30%;
-  left: calc(50% - 40px);
+  left: calc(50% - 150px);
 }
-#emonicationRoot #ranges #fieldInput {
-  outline: solid red 1px;
-  height: 80px;
-  width: 80px;
+#emonicationRoot .position-container #ranges #fieldInput {
+  height: 300px;
+  width: 300px;
+  margin-bottom: 32px;
 }
-#emonicationRoot #ranges #fieldInput img {
+#emonicationRoot .position-container #ranges #fieldInput img {
   height: 100%;
   width: 100%;
+}
+#emonicationRoot .position-container #deleteButton {
+  position: absolute;
+  right: -12%;
+  bottom: 3%;
+}
+#emonicationRoot .position-container .input-container {
+  display: flex;
+}
+#emonicationRoot .position-container .input-container #textInputLabel {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  margin-left: -50px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+}
+#emonicationRoot .position-container .input-container #textInputLabel .label-text {
+  margin-top: 32px;
+  font-size: 32px;
+  font-weight: 800;
+  color: white;
 }/*# sourceMappingURL=index.css.map */

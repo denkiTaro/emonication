@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="ja">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  -->
+    <title>EMONICATION - エモニケーション</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="../src/images/icon.png">
+    <!--  -->
+</head>
 
-<body id="emonicationRoot" >
-
+<body id='emonicationRoot'>
     <main>
-        
 
-        <form id="ranges">
-            <div>
+        <div class="text-container">
+            <!-- 文字入力 -->
+            <textarea name="" id="textInput" cols="30" rows="10"></textarea>
+        </div>
+        
+        <div class="position-container">
+            <!-- エモコン -->
+            <form id="ranges">
                 <div id="fieldInput">
-                    <img src="./Group 10.png" alt="">
-  
+                    <img src="../src/images/icon.png" alt="">
                 </div>
+            </form>
+
+            <!-- ゴミ箱ボタン -->
+            <span id="deleteButton">
+                <img src="../src/images/icon_delete.png" height="80" width="80" alt="">
+            </span>
+
+            <!-- キーボード予定地 -->
+            <div class="input-container">
+                <label id="textInputLabel" for="textInput"><span class="label-text">文字を入力する</span></label>
             </div>
-        </form>
+        </div>
+
     </main>
 </body>
+<script src="./index.js" type="module"></script>
 
-<script src="./index.js"></script>
+
 </html>
