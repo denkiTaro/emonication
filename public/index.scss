@@ -22,12 +22,14 @@ body * {
         #textInput {
             outline: 0;
             border: 0;
+            height: 5em;
             width: 90vw;
             font-size: 40px;
             font-weight: 800;
             margin-top: 40px;
             background: transparent;
             resize: none;
+            border-bottom: solid rgba(0, 0, 0, 0.2);
             
         }
     }

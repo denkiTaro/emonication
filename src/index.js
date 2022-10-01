@@ -19,7 +19,7 @@ const deleteClickEvent = EVENT.deleteClickEvent;
 
 // event設定
 ranges.addEventListener( 'pointerdown' , (e)=>{ pointerdownEvent(e) } );
-ranges.addEventListener( 'pointermove' , (e)=>{ pointermoveEvent(e) , e.preventDefault() } );
+ranges.addEventListener( 'pointermove' , (e)=>{ pointermoveEvent(e); e.preventDefault() } );
 ranges.addEventListener( 'touchend'    , (e)=>{ touchendEvent(e) } );
 
 deleteButton.addEventListener( 'click' , ()=>{ deleteClickEvent() } );
