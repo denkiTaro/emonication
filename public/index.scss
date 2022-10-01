@@ -28,26 +28,21 @@ body * {
             margin-top: 40px;
             background: transparent;
             resize: none;
-            border-bottom: solid rgba(0, 0, 0, 0.1);
-            height: 6em;
-            position: fixed;
-            left: 16px;
             
         }
     }
 
     .position-container {
         position: fixed;
-        // bottom: 30%;
-        // top: 27%;
-        top: 256px;
-        left: calc(50% - 150px);
+        top: 240px;
         opacity: .5;
+
+        left: calc(50% - 150px);
         #ranges {
             #fieldInput {
                 height: 300px;
-                width:  300px;
-                // margin-bottom: 32px;
+                width: 300px;
+                margin-bottom: 32px;
                 img {
                     height: 100%;
                     width: 100%;
@@ -66,12 +61,18 @@ body * {
         #deleteButton {
             position: absolute;
             right: -12%;
-            bottom: 100px;
+            bottom: 5%;
         }
         .input-container {
             display: flex;
-
             display: none;
+            // #textInput {
+                // outline: 0;
+                // border: 0;
+                // background: transparent;
+                // position: absolute;
+                // top: 0;
+            // }
             #textInputLabel {
                 position: absolute;
                 width: 400px;
@@ -88,7 +89,6 @@ body * {
                     font-size: 32px;
                     font-weight: 800;
                     color: white;
-                    opacity: 1;
                 }
             }
         }

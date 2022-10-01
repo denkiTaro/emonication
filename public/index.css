@@ -16,20 +16,17 @@
   margin-top: 40px;
   background: transparent;
   resize: none;
-  border-bottom: solid rgba(0, 0, 0, 0.1);
-  height: 6em;
-  position: fixed;
-  left: 16px;
 }
 #emonicationRoot .position-container {
   position: fixed;
-  top: 256px;
-  left: calc(50% - 150px);
+  top: 240px;
   opacity: 0.5;
+  left: calc(50% - 150px);
 }
 #emonicationRoot .position-container #ranges #fieldInput {
   height: 300px;
   width: 300px;
+  margin-bottom: 32px;
 }
 #emonicationRoot .position-container #ranges #fieldInput img {
   height: 100%;
@@ -38,7 +35,7 @@
 #emonicationRoot .position-container #deleteButton {
   position: absolute;
   right: -12%;
-  bottom: 100px;
+  bottom: 5%;
 }
 #emonicationRoot .position-container .input-container {
   display: flex;
@@ -58,5 +55,4 @@
   font-size: 32px;
   font-weight: 800;
   color: white;
-  opacity: 1;
 }/*# sourceMappingURL=index.css.map */
