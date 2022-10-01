@@ -19,7 +19,7 @@
 }
 #emonicationRoot .position-container {
   position: fixed;
-  top: 27%;
+  bottom: 64px;
   left: calc(50% - 150px);
 }
 #emonicationRoot .position-container #ranges #fieldInput {
@@ -33,7 +33,7 @@
 #emonicationRoot .position-container #deleteButton {
   position: absolute;
   right: -12%;
-  bottom: -10%;
+  bottom: -9%;
 }
 #emonicationRoot .position-container .input-container {
   display: flex;

@@ -35,7 +35,8 @@ body * {
     .position-container {
         position: fixed;
         // bottom: 30%;
-        top: 27%;
+        // top: 27%;
+        bottom: 64px;
         left: calc(50% - 150px);
         #ranges {
             #fieldInput {
@@ -61,7 +62,7 @@ body * {
             position: absolute;
             right: -12%;
             // bottom: 3%;
-            bottom: -10%;
+            bottom: -9%;
         }
         .input-container {
             display: flex;
