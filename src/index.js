@@ -23,8 +23,3 @@ ranges.addEventListener( 'pointermove' , (e)=>{ pointermoveEvent(e) } );
 ranges.addEventListener( 'touchend'    , (e)=>{ touchendEvent(e) } );
 
 deleteButton.addEventListener( 'click' , ()=>{ deleteClickEvent() } );
-
-
-// 入力された文字に対しての処理
-textInputDOM.addEventListener( 'input' , (e)=>{ textInputDOM.value } );
-console.log( textInputDOM );
