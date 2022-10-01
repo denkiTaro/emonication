@@ -1,3 +1,6 @@
+.firebase/
+node_modules/
 app.py
 requirements.txt
-templates
+templates/
+src/firebase/

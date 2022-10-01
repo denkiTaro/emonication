@@ -1,0 +1,26 @@
+{
+  "name": "emonication",
+  "version": "1.0.0",
+  "description": "contextから必要な情報を取得できます\r フロントエンドは\r public , src で完結しています、",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denkiTaro/emonication.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denkiTaro/emonication/issues"
+  },
+  "homepage": "https://github.com/denkiTaro/emonication#readme",
+  "dependencies": {
+    "firebase": "^9.10.0",
+    "webpack": "^5.74.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.10.0"
+  }
+}

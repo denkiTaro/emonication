@@ -1,6 +1,8 @@
 'use strict';
+
 import * as context from './context/context.js';
 import * as EVENT from './js/event.js';
+import './firebase/firebase.js';
 
 const ranges = document.getElementById('ranges');
 const fieldInputDOM = document.getElementById('fieldInput');
