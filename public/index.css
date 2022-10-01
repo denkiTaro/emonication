@@ -16,6 +16,8 @@
   margin-top: 40px;
   background: transparent;
   resize: none;
+  border-bottom: solid rgba(0, 0, 0, 0.1);
+  height: 6em;
 }
 #emonicationRoot .position-container {
   position: fixed;

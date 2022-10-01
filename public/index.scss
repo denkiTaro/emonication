@@ -28,6 +28,8 @@ body * {
             margin-top: 40px;
             background: transparent;
             resize: none;
+            border-bottom: solid rgba(0, 0, 0, 0.1);
+            height: 6em;
             
         }
     }
@@ -68,13 +70,6 @@ body * {
             display: flex;
 
             display: none;
-            // #textInput {
-                // outline: 0;
-                // border: 0;
-                // background: transparent;
-                // position: absolute;
-                // top: 0;
-            // }
             #textInputLabel {
                 position: absolute;
                 width: 400px;
