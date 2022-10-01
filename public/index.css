@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
+  position: fixed;
 }
 #emonicationRoot .text-container {
   word-break: break-word;
