@@ -6,6 +6,7 @@ const ranges = document.getElementById('ranges');
 const fieldInputDOM = document.getElementById('fieldInput');
 const deleteButton = document.getElementById('deleteButton');
 const fieldRanges = context.fieldRanges;
+const textInputDOM = document.getElementById('textInput');
 
 // fieldRangesのサイズを設定
 fieldRanges.height = fieldInputDOM.offsetHeight;
@@ -23,3 +24,7 @@ ranges.addEventListener( 'touchend'    , (e)=>{ touchendEvent(e) } );
 
 deleteButton.addEventListener( 'click' , ()=>{ deleteClickEvent() } );
 
+
+// 入力された文字に対しての処理
+textInputDOM.addEventListener( 'input' , (e)=>{ textInputDOM.value } );
+console.log( textInputDOM );

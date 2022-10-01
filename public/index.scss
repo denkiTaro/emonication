@@ -28,7 +28,11 @@ body * {
             margin-top: 40px;
             background: transparent;
             resize: none;
-            
+
+            position: sticky;
+            top: 0;
+            left: 16px;
+            margin: 0;
         }
     }
 
