@@ -23,8 +23,9 @@
 }
 #emonicationRoot .position-container {
   position: fixed;
-  bottom: 64px;
+  top: 256px;
   left: calc(50% - 150px);
+  opacity: 0.5;
 }
 #emonicationRoot .position-container #ranges #fieldInput {
   height: 300px;
@@ -37,7 +38,7 @@
 #emonicationRoot .position-container #deleteButton {
   position: absolute;
   right: -12%;
-  bottom: -9%;
+  bottom: 100px;
 }
 #emonicationRoot .position-container .input-container {
   display: flex;
@@ -57,4 +58,5 @@
   font-size: 32px;
   font-weight: 800;
   color: white;
+  opacity: 1;
 }/*# sourceMappingURL=index.css.map */

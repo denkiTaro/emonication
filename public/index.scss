@@ -40,12 +40,13 @@ body * {
         position: fixed;
         // bottom: 30%;
         // top: 27%;
-        bottom: 64px;
+        top: 256px;
         left: calc(50% - 150px);
+        opacity: .5;
         #ranges {
             #fieldInput {
                 height: 300px;
-                width: 300px;
+                width:  300px;
                 // margin-bottom: 32px;
                 img {
                     height: 100%;
@@ -65,8 +66,7 @@ body * {
         #deleteButton {
             position: absolute;
             right: -12%;
-            // bottom: 3%;
-            bottom: -9%;
+            bottom: 100px;
         }
         .input-container {
             display: flex;
@@ -88,6 +88,7 @@ body * {
                     font-size: 32px;
                     font-weight: 800;
                     color: white;
+                    opacity: 1;
                 }
             }
         }
