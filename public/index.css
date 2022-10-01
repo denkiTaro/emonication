@@ -43,6 +43,7 @@
 }
 #emonicationRoot .position-container .input-container {
   display: flex;
+  display: none;
 }
 #emonicationRoot .position-container .input-container #textInputLabel {
   position: absolute;
